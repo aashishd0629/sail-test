@@ -1,9 +1,9 @@
 <?php
 
-namespace app\Repositories;
+namespace App\Repositories;
 
-use app\Models\Post;
-use app\Repositories\Interfaces\PostRepositoryInterface;
+use App\Models\Post;
+use App\Repositories\Interfaces\PostRepositoryInterface;
 
 class PostRepository implements PostRepositoryInterface{
 
@@ -15,7 +15,7 @@ class PostRepository implements PostRepositoryInterface{
      }
      public function update($data,$id){
         $post =Post::where('id',$id)->first();
-        
+
 
      }
      public function destroy($id){

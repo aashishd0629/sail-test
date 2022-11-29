@@ -16,17 +16,18 @@ class PostController extends Controller
     }
     public function index()
     {
-        $this->postRepository->all();
+       $posts= $this->postRepository->all();
+       return $posts;
     }
 
     public function store(PostRequest $postRequest)
     {
         $this->postRepository->store($postRequest);
     }
-    public function update(Request $request,$id)
-    {
-    }
-    public function destroy($id)
-    {
-    }
+    // public function update(Request $request,$id)
+    // {
+    // }
+    // public function destroy($id)
+    // {
+    // }
 }
